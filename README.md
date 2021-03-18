@@ -5,6 +5,12 @@ simple class utility for tracking amount of time elapsed in milliseconds (ms).
 ## how to use StopWatch class via NPM/node.js
 first instantiate a new StopWatch object instance from the StopWatch class
 
+installation from terminal/CMD line
+```
+npm i @slime/stopwatch
+```
+
+usage:
 ```
 const StopWatch = require("@slime/stopwatch"); 
 let stopWatch = new StopWatch(); 
