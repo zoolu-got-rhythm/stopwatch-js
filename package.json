@@ -1,6 +1,6 @@
 {
   "name": "@slime/stopwatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a class for handling elapsed time in ms",
   "main": "StopWatch.js",
   "scripts": {
