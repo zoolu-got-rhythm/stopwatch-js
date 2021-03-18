@@ -2,7 +2,7 @@
 
 simple class utility for tracking amount of time elapsed in milliseconds (ms).
 
-## how to use StopWatch class
+## how to use StopWatch class via NPM/node.js
 first instantiate a new StopWatch object instance from the StopWatch class
 
 ```
