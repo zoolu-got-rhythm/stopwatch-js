@@ -1,4 +1,4 @@
-const StopWatch = require("@slime/stopwatch"); 
+const StopWatch = require("./stopwatch"); 
 let stopWatch = new StopWatch(); 
 console.log(stopWatch.getTimeElapsedInMs);
 console.log(stopWatch.getTimeElapsedInStopWatchFormatString); 
