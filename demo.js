@@ -1,4 +1,4 @@
-const StopWatch = require("./stopwatch"); 
+const StopWatch = require("./dist/StopWatch"); 
 let stopWatch = new StopWatch(); 
 console.log(stopWatch.getTimeElapsedInMs);
 console.log(stopWatch.getTimeElapsedInStopWatchFormatString); 

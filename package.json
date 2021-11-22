@@ -2,8 +2,8 @@
   "name": "@slime/stopwatch",
   "version": "1.1.0",
   "description": "a class for handling and printing elapsed time in ms, under the hood is just comparing timestamps with Date.now().",
-  "main": "StopWatch.js",
-  "types": "types/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "jest"
   },

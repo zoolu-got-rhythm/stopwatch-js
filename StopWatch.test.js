@@ -9,7 +9,7 @@ test('adds 1 + 2 to equal 3', () => {
 //     expect().toBe();
 // });
 
-const StopWatch = require("./StopWatch");
+const StopWatch = require("./dist/StopWatch");
 const sleep = require("./sleep");
 
 test('on object initialisation time elapsed in ms(millaseconds) to be equal to 0', () => {

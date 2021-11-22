@@ -2,6 +2,8 @@
 
 simple class utility for tracking amount of time elapsed in milliseconds (ms).
 
+version 1.1.0: added typescript type definitions for StopWatch class
+
 ## how to use StopWatch class via NPM/node.js
 installation from terminal/CMD line
 ```

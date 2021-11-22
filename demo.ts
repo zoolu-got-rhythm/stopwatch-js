@@ -1,4 +1,4 @@
-import StopWatch from "./StopWatch"
+import StopWatch from "./dist/StopWatch"
 let stopWatch = new StopWatch(); 
 console.log(stopWatch.getTimeElapsedInMs);
 console.log(stopWatch.getTimeElapsedInStopWatchFormatString); 
