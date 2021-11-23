@@ -55,7 +55,7 @@ class StopWatch{
         let secondsNumberAsString = String(this.getSecondsElapsedIn60Seconds);
         let secondsAs2Digits = secondsNumberAsString.length > 1 ? secondsNumberAsString : "0" + secondsNumberAsString;
 
-        let millaSecondAs2DigitNumberAsString = "0" + String(Math.floor(this.getCurrentMillaSecondElapsedAsFraction * 10));
+        let millaSecondAs2DigitNumberAsString = "0" + String(Math.round(this.getCurrentMillaSecondElapsedAsFraction * 10));
 
         return `${minsAs2Digits}:${secondsAs2Digits}:${millaSecondAs2DigitNumberAsString}`;
     }
