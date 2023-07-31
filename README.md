@@ -1,9 +1,12 @@
 # StopWatch
 
+![Static Badge](https://img.shields.io/badge/type_definitions-100%25-blue)
+![Static Badge](https://img.shields.io/badge/test_coverage-100%25-green)
+
 simple class utility for tracking amount of time elapsed in milliseconds (ms), by comparing time stamps
 
-version 1.1.0: added typescript type definitions for StopWatch class
-version 1.2.1: fixed bug where when stop, and resume again, the logic to calculate new time elapsed (while taking into account previous time elapsed) was wrong
+- version 1.1.0: added typescript type definitions for StopWatch class
+- version 1.2.1: fixed bug where when stop, and resume again, the logic to calculate new time elapsed (while taking into account previous time elapsed) was wrong
 
 ## how to use StopWatch class via NPM/node.js
 installation from terminal/CMD line
