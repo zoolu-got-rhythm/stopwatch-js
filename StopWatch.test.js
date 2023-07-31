@@ -4,11 +4,6 @@ test('adds 1 + 2 to equal 3', () => {
     expect(1 + 2).toBe(3);
 });
 
-// template
-// test('', () => {
-//     expect().toBe();
-// });
-
 const StopWatch = require("./dist/StopWatch");
 const sleep = require("./sleep");
 
@@ -38,25 +33,65 @@ test('on timer start, after 1 second elapsed result to be equal or greater than 
 });
 
 test('start, stop, resume, reset, start: stopwatch timer', async () => {
+    jest.setTimeout(15000);
+
     // will need to use await sleep()'s
     const tollerenceInMs = 10;
     const sw = new StopWatch();
     sw.startTimer();
-    await sleep(1000);
+    await sleep(970);
     sw.stopTimer();
+    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 970, tollerenceInMs);
+
+    sw.startTimer();
+    await sleep(30);
+    sw.stopTimer();
+    
+
+
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1000, tollerenceInMs);
+
+
+
+
     await sleep(1000);
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1000, tollerenceInMs);
     sw.startTimer();
     await sleep(1000);
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 2000, tollerenceInMs);
+    await sleep(2000);
+    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 4000, tollerenceInMs);
     sw.stopTimer();
-    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 2000, tollerenceInMs);
+    await sleep(1000);
+    sw.stopTimer();
+    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 4000, tollerenceInMs);
+    sw.startTimer();
+    await sleep(1000);
+    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 5000, tollerenceInMs);
     sw.reset();
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 0, tollerenceInMs);
     sw.startTimer();
-    await sleep(1500);
-    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1500, tollerenceInMs);
+    await sleep(1000);
+    testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1000, tollerenceInMs);
+
+
+
+
+
+
+
+
+
+
+
+
+    // sw.stopTimer();
+    // testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 2000, tollerenceInMs);
+    // sw.reset();
+    // testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 0, tollerenceInMs);
+    // sw.startTimer();
+    // await sleep(1500);
+    // testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1500, tollerenceInMs);
 });
 
 function testTimerDisplaysCorrectTimeAfterMsElapsed(stopWatchObject, ms, msTollerence){

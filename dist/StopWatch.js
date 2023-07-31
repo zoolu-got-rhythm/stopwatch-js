@@ -1,37 +1,37 @@
 class StopWatch{
     constructor() {
+        this.prevTimeElapsed = 0;
         this.start = null;
-        this.stop = null;
+        this.resume = false;
     }
 
     startTimer(){
-        if(this.stop) {
-            this.start = this.stop;
-            this.stop = null;
-            return;
+        if(this.start == null || this.resume){
+            this.start = Date.now();
+            this.resume = false; 
         }
-        this.start = Date.now();
     }
 
     stopTimer(){
-        if(this.stop)
-            return;
-        this.stop = Date.now();
+        if(this.resume == false){
+            this.resume = true; 
+            this.prevTimeElapsed = this.prevTimeElapsed + (Date.now() - this.start);
+        }
     }
 
     reset(){
         this.start = null;
-        this.stop = null;
+        this.prevTimeElapsed = 0;
     }
 
     get getTimeElapsedInMs(){
-        if(this.start == null)
+        if(this.start == null){ // if stopwatch hasn't started yet or is reset
             return 0;
-
-        if(this.stop == null)
-            return Date.now() - this.start;
-
-        return this.stop - this.start;
+        }else if(this.resume){ // if stop watch is currently stopped
+            return this.prevTimeElapsed;
+        }else{ // get time whilst stopwatch is not stopped
+            return this.prevTimeElapsed + (Date.now() - this.start);
+        }
     }
 
     get getSecondsElapsedIn60Seconds(){
@@ -55,7 +55,7 @@ class StopWatch{
         let secondsNumberAsString = String(this.getSecondsElapsedIn60Seconds);
         let secondsAs2Digits = secondsNumberAsString.length > 1 ? secondsNumberAsString : "0" + secondsNumberAsString;
 
-        let millaSecondAs2DigitNumberAsString = "0" + String(Math.round(this.getCurrentMillaSecondElapsedAsFraction * 10));
+        let millaSecondAs2DigitNumberAsString = "0" + String(Math.floor(this.getCurrentMillaSecondElapsedAsFraction * 10));
 
         return `${minsAs2Digits}:${secondsAs2Digits}:${millaSecondAs2DigitNumberAsString}`;
     }

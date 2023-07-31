@@ -7,4 +7,4 @@ setTimeout(()=>{
     stopWatch.stopTimer();
     console.log(stopWatch.getTimeElapsedInMs);
     console.log(stopWatch.getTimeElapsedInStopWatchFormatString); 
-}, 1500); 
+}, 1010); 
