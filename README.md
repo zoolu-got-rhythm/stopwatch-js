@@ -1,8 +1,9 @@
 # StopWatch
 
-simple class utility for tracking amount of time elapsed in milliseconds (ms).
+simple class utility for tracking amount of time elapsed in milliseconds (ms), by comparing time stamps
 
 version 1.1.0: added typescript type definitions for StopWatch class
+version 1.2.1: fixed bug where when stop, and resume again, the logic to calculate new time elapsed (while taking into account previous time elapsed) was wrong
 
 ## how to use StopWatch class via NPM/node.js
 installation from terminal/CMD line
