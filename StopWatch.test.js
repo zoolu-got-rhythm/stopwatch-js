@@ -47,12 +47,7 @@ test('start, stop, resume, reset, start: stopwatch timer', async () => {
     await sleep(30);
     sw.stopTimer();
     
-
-
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1000, tollerenceInMs);
-
-
-
 
     await sleep(1000);
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1000, tollerenceInMs);
@@ -73,25 +68,6 @@ test('start, stop, resume, reset, start: stopwatch timer', async () => {
     sw.startTimer();
     await sleep(1000);
     testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1000, tollerenceInMs);
-
-
-
-
-
-
-
-
-
-
-
-
-    // sw.stopTimer();
-    // testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 2000, tollerenceInMs);
-    // sw.reset();
-    // testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 0, tollerenceInMs);
-    // sw.startTimer();
-    // await sleep(1500);
-    // testTimerDisplaysCorrectTimeAfterMsElapsed(sw, 1500, tollerenceInMs);
 });
 
 function testTimerDisplaysCorrectTimeAfterMsElapsed(stopWatchObject, ms, msTollerence){
