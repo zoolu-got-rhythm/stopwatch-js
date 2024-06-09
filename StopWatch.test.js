@@ -16,7 +16,7 @@ calling .startTimer() work as expected", () => {
   const sw = new StopWatch();
   sw.stopTimer();
   sw.startTimer();
-  expect(sw.getTimeElapsedInMs).toBeLessThanOrEqual(1000);
+  expect(sw.getTimeElapsedInMs).toBeLessThanOrEqual(10);
 });
 
 test("on object initialisation before starting timer, stop watch format string to be \
