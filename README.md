@@ -7,7 +7,7 @@ simple class utility for tracking amount of time elapsed in milliseconds (ms), b
 
 - version 1.1.0: added typescript type definitions for StopWatch class
 - version 1.2.1: fixed bug where when stop, and resume again, the logic to calculate new time elapsed (while taking into account previous time elapsed) was wrong
-- version 1.3.0: fixed bug where when initially calling .stopTimer() before subsequent calls to .startTimer() when the StopWatch object is first instantiated, it will cause the incorrect time elapsed to be returned
+- version 1.3.0: fixed bug where when initially calling .stopTimer() before subsequent calls to .startTimer() when the StopWatch object is first instantiated, it would cause the incorrect time elapsed to be returned
 
 ## how to use StopWatch class via NPM/node.js
 
